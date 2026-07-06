@@ -1,29 +1,19 @@
-def add(a,b):
-    return(a+b)
+scores = {"Raj": 90, "Sita": 84, "Alex": 76, "Eshaan": 100, "Advik": 89}
+total = 0
+count = 0
+for i in scores.values():
+    total = total + i
+    count = count+1
 
-def minus(a,b):
-    return(a-b)
+average = total/count
+print("The average is", average)
 
-def multiply(a,b):
-    return(a*b)
+print("The least score is",min(scores.values()))
+print("The max score is",max(scores.values()))
 
-def divide(a,b):
-    return(a/b)
+a = (input("Which student would you like to get? "))
 
-try:
-    number1 = float(input("Enter a number: "))
-    number2 = float(input("Enter a second number: "))
-    operation = int(input("Enter an operation(Multiply, Divide, Add, Subtract): "))
-except ValueError:
-    print("That is not a number or operation")
-except ZeroDivisionError:
-    print("I cannot divide by zero!")
-
-if operation == "Multiply":
-    print(multiply(number1, number2))
-elif operation == "Divide":
-    print(divide(number1, number2))
-elif operation == "Add":
-    print(add(number1, number2))
-elif operation == "Subtract":
-    print(minus(number1, number2))
+if a in scores:
+    print("name found")
+else:
+    print("name not found")
