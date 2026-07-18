@@ -1,16 +1,26 @@
-class IOString():
-
-    def __init__(self):
-        self.str1 = ""
-
-    def get_String(self):
-        self.str1 = input("Enter String:")
-
-    def print_String(self):
-        print("The result is:", self.str1.upper())
+class FamilyMember:
+    def __init__(self, eye_color, height_cm):
+            self.eye_color = eye_color
+            self.height = height_cm
+    def show_traits(self):
+          print("Eye color:", self.eye_color)
+          print("Height (cm):", self.height_cm)
 
 
-str1 = IOString()
+class Kid(FamilyMember):
+    def __init__(self, name , age, eye_color , height_cm):
+            self.name = name
+            self.age = age
+            super(). __init__(eye_color, height_cm)
 
-str1.get_String()
-str1.print_String()
+    def show_traits(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+        super().show_traits()
+
+    def favorite_hobby(self, hobby):
+        print(self.name, "loves", hobby)
+
+child = Kid("Maya", 10, "brown", 140)
+
+print("HI")
