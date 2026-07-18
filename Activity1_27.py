@@ -23,4 +23,7 @@ class Kid(FamilyMember):
 
 child = Kid("Maya", 10, "brown", 140)
 
-print("HI")
+child.show_traits()
+child.favorite_hobby("painting")
+
+print("IS kid a subclass of Family member?", issubclass(Kid, FamilyMember))
