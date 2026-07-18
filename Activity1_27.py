@@ -1,7 +1,7 @@
 class FamilyMember:
     def __init__(self, eye_color, height_cm):
             self.eye_color = eye_color
-            self.height = height_cm
+            self.height_cm = height_cm
     def show_traits(self):
           print("Eye color:", self.eye_color)
           print("Height (cm):", self.height_cm)
